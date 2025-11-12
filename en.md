@@ -1,5 +1,3 @@
-
-
 # Linear Algebra in A Nutshell
 
 ## Table of Contents
@@ -77,7 +75,7 @@ $$
 - $\mathrm R_i \leftrightarrow \mathrm R_j$ : $\det A$ changes to $-\det A$
 - $\mathrm R_i \gets c\mathrm R_i$ : $\det A$ changes to ${\color{blue}c}\det A$
   - $\det (cA) = {\color{blue}c^m} \det A$
-- $\mathrm R_i \gets \mathrm R_i + \mathrm R_j$ : $\det A$ doesn't change
+- $\mathrm R_i \gets \mathrm R_i + c\mathrm R_j$ : $\det A$ doesn't change
 
 #### *Calculating $\det$*
 
@@ -95,13 +93,17 @@ where $C_{ij}$ is **cofactor** of $A$, $\boxed {C_{ij} = (-1)^{i + j}M_{ij}}$, a
 #### *Applications of determinants*
 
 - Finding areas of polygons
-  - 
-
+  
 - Solving Linear Systems (Cramer's Rule)
+
+  - $$
+    x_i = \frac{\det A_i(\boldsymbol b)}{\det A}
+    $$
+    where $\det A_i(\boldsymbol b)$ is substituting $i$-th column of $A$ with $\boldsymbol b$. 
 
 - Finding inverse of matrix
   $$
-  A^{-1} = \frac{1}{\det A}\operatorname{adj} A
+  A^{-1} = \frac{\operatorname{adj} A}{\det A}
   $$
   Where **adjoint matrix** $\operatorname{adj}A = C^\mathsf T$ is the transpose of cofactors of $A$. 
 
@@ -256,11 +258,11 @@ for i, name in enumerate(names):
 
 - $T(\boldsymbol x+\boldsymbol y) = T(\boldsymbol x) + T(\boldsymbol y)$
 - $T(c\boldsymbol x) = cT(\boldsymbol x)$
-  - Which implies $T(\boldsymbol 0) = \boldsymbol 0$. 
+  - which implies $T(\boldsymbol 0) = \boldsymbol 0$. 
 
 ## Linear Systems
 
-### Solutions 
+### Solutions
 
 - no solution
 - infinity many solutions
